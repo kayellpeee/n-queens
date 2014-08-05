@@ -12,16 +12,15 @@ var findNQueensSolution = function(n){
 
 		// check if at base case
 		if( tempSolution.length === n ){
-					if( solutionCount === 2 ){
-						debugger;
-					}
 			console.log(tempSolution);
 			return solutionCount++;
 		}
 
 		// loop through possible placements
 		for( var i = 0; i < queens.length; i++ ){
+
 			conflicts = false;
+
 			// if place not already made, place queen
 			if( tempSolution.indexOf(i) === -1 ){
 				tempSolution.push(i);
@@ -39,10 +38,8 @@ var findNQueensSolution = function(n){
 				// if placement was valid, make next placement
 				if( conflicts === false ){
 					var result = makePlacement();
-				
-					// if we found a solution, exit out of loop
-					if( result ){ return result; }
 				}
+
 				tempSolution.pop();
 			}
 		}
