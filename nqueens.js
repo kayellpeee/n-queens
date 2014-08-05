@@ -33,7 +33,6 @@ var findNQueensSolution = function(n){
 					}
 						conflicts = false;
 				}
-				// console.log(Math.abs(tempSolution[j] - i), Math.abs(j - tempSolution.indexOf(i)), tempSolution);
 
 				// if placement was valid, make next placement
 				if( conflicts === false ){
