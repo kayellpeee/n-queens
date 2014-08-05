@@ -12,7 +12,6 @@ var findNQueensSolution = function(n){
 
 		// check if at base case
 		if( tempSolution.length === n ){
-			console.log(tempSolution);
 			return solutionCount++;
 		}
 
